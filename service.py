@@ -11,7 +11,7 @@ class SingeltonMeta(type):
         return cls._instances[cls]
 
 
-class VectorService(type=SingeltonMeta):
+class VectorService(metaclass=SingeltonMeta):
     def __init__(self, model_id: str) -> None:
         self.model = VectorizerFactory.get_model(model_id)
 
