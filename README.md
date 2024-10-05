@@ -12,13 +12,14 @@ Simply clone the repository, install the dependencies and start the service usin
 git clone
 ```
 
-2. Install dependencies  
-a. via `pip`
+2. Install dependencies
+
+via `pip`
 ```
 python -m pip install .
 ```
 
-b. via `poetry`
+via `poetry`
 ```
 poetry install
 ```
@@ -27,6 +28,7 @@ poetry install
 ```
 python main.py
 ```
+After starting the service locally you can inspect the endpoints by visiting `http://localhost:8000/docs`.
 
 In the future, further configuration options will follow that can be defined in `settings.toml`. In addition, api keys and other secrets can be stored in a `secrets.toml`.
 
