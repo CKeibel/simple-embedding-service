@@ -18,5 +18,6 @@ class VectorService(metaclass=SingeltonMeta):
     def vectorize(self, inputs: str | list[str]) -> list[list[float]]:
         return self.model.vectorize(inputs)
 
+    @classmethod
     def create_service(cls, model_id: str):
         return cls(model_id)
