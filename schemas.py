@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class EmbeddingRequest(BaseModel):
@@ -9,3 +9,8 @@ class EmbeddingRequest(BaseModel):
 
 class EmbeddingResponse(BaseModel):
     embeddings: list[float] | list[list[float]]
+
+
+class ModelChangeRequest(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+    model_id: str = Field(example="sentence-transformers/all-MiniLM-L6-v2")
